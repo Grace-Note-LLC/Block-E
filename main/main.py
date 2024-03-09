@@ -3,6 +3,7 @@ import simple
 import imageTaker as iT
 import gridOverlay as grid
 import threading
+import wordFinder as wf
 
 
 def helpME():
@@ -46,11 +47,14 @@ def main():
                 
         common_letters.append(common_row)
    
-    print("\n")
-    print(common_letters)
+    # print("\n")
+    # print(common_letters)
+    # common_letters = [['', '', '', '', '', '', '', '', ''], ['A', '', 'H', 'A', 'P', 'P', 'Y', '', ''], ['', '', 'A', 'E', 'E', 'N', 'W', '', 'N'], ['', 'J', 'Y', 'G', 'L', 'U', 'F', '', 'A'], ['', 'O', '', 'Y', 'T', 'S', 'P', '', ''], ['', 'Y', 'I', 'O', 'M', 'C', 'A', '', 'D'], ['', '', 'S', 'S', 'K', 'P', 'H', '', 'A'], ['', '', '', '', '', 'C', 'F', 'J', 'G']]
     grid.main(common_letters)
 
-    
+    coords = wf.findHappyWords(common_letters)
+
+    # print(coords)
 
 
     

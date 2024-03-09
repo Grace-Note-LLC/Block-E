@@ -18,7 +18,7 @@ def take():
 		for i in range(0, width - 1, w_GRID_SIZE):
 			cv2.line(image, (i, 0), (i, height), (255, 0, 0), 1, 1)
 		cv2.imshow('Imagetest',image)
-		k = cv2.waitKey(1)
+		k = cv2.waitKey(7)
 		if k != -1:
 			break
 	cv2.imwrite('./blockImage/big.jpg', image)
