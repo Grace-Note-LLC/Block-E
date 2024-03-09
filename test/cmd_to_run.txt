@@ -1,5 +1,16 @@
 python Main.py /bin/tesseract -v 1 -s 2
 
 
+source ./main/bin/activate
+
+
 windows command:
 python Main.py -t C:\users\USER\appdata\local\programs\python\python39\scripts\pytesseract.exe -v 1 -s 2
+
+
+
+cool cmds:
+
+sudo fswebcam -d /dev/video1 -r 1980x720 --no-banner ./image6.jpg
+
+sudo /usr/local/bin/mjpg_streamer -i "/usr/local/lib/mjpg-streamer/input_uvc.so -n -f 10 -d /dev/video1 -r 1280x720" > -o "output_http.so -w /snap/mjpg-streamer/current/share/mjpg-streamer/www"
