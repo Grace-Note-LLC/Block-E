@@ -2,9 +2,8 @@ from PIL import Image
 from itertools import product
 import os
 
-def tile():
+def tile(dir_in):
     filename = "split.jpg"
-    dir_in = "./blockImage/big.jpg"
     dir_out = "./blockImage/blocks"
     h_d = 60
     w_d = 70

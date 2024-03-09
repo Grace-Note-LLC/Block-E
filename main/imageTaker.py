@@ -1,4 +1,5 @@
 import cv2
+import time
 
 cam = cv2.VideoCapture(1)
 
@@ -21,5 +22,7 @@ def take():
 		if k != -1:
 			break
 	cv2.imwrite('./blockImage/big.jpg', image)
+	time.sleep(2)
+	cv2.imwrite('./blockImage/big2.jpg', image)
 	cam.release()
 	cv2.destroyAllWindows()

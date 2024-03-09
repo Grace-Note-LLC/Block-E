@@ -18,6 +18,10 @@ def OCR():
         # letter = chr(i)
         topr = ''
         # print(file)
+        letters = []
+        r = 0
+        c = 0
+        row_let = []
         for j in range(0, 72):
             img = np.array(Image.open(file + str(j) + '.jpg'))
             norm_img = np.zeros((img.shape[0], img.shape[1]))
@@ -33,10 +37,27 @@ def OCR():
                     " -l eng"
                     " "))
             text = text.replace('\n', '')
-            topr += text + ' '
-            print(str(j) + ":" + text + ' ')
+            if((c%9 == 0) and (c != 0)):
+                c = 0
+                letters.append(row_let)
+                row_let = []
+                r += 1
+                print("row " + str(r) + ": " + topr)
+                topr = ""
+            row_let.append(text)
+            topr += text + " "
+            # print(text)
+            c += 1
+        letters.append(row_let)
+        print("row 8: " + topr)
+        return(letters)
+
+            
+            # topr += text + ' '
+            # print(str(j) + ":" + text + ' ')
             # if letter in text:
             #     tresh += 1
+        
         # print(topr)
         # print(letter + ': ' + str(tresh) + "/20") #'/14990')
         # norm_img = np.zeros((img.shape[0], img.shape[1]))
