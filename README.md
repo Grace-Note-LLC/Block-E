@@ -1,7 +1,7 @@
-# IEEE-QP-WI24
+# Block-E: IEEE-QP-WI24
 
 ## Project Description
-$ROBOT-NAME is a robotic arm that reads its surroundings to generate positive words. 
+Block-E is a robotic arm that reads its surroundings to generate positive words. 
 
 
 ## Hardware
@@ -19,4 +19,3 @@ $ROBOT-NAME is a robotic arm that reads its surroundings to generate positive wo
 ## Collaborators / Acknowledgements
 
 
-P@ssword13
